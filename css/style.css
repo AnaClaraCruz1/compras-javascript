@@ -1,0 +1,21 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#176b5b;--dark:#0e5144;--bg:#f4f7f6;--text:#24332f;--muted:#6b7773;--border:#d9e1de;--error:#b42318}
+body{min-height:100vh;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);padding:32px 16px}
+.container{max-width:520px;margin:auto}.payment-card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:30px;box-shadow:0 10px 30px rgba(30,50,45,.08)}
+.header{margin-bottom:25px}.tag{display:inline-block;margin-bottom:8px;color:var(--primary);font-size:12px;font-weight:bold;letter-spacing:1px}
+h1{font-size:30px;margin-bottom:8px}.header p,.section-description{color:var(--muted);line-height:1.5}
+.value-group,.field{margin-bottom:18px}label,legend{display:block;font-size:14px;font-weight:bold;margin-bottom:8px}fieldset{border:0}
+.payment-method{display:flex;gap:22px;flex-wrap:wrap;margin:8px 0 18px}.method-option{display:flex;align-items:center;gap:7px;font-weight:500;cursor:pointer;margin:0}
+input,select{width:100%;height:44px;border:1px solid var(--border);border-radius:8px;padding:0 12px;font-size:15px;color:var(--text);background:#fff;outline:none}
+input:focus,select:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(23,107,91,.1)}
+input[type=radio]{width:auto;height:auto;accent-color:var(--primary)}
+.input-money{display:flex;align-items:center;height:44px;border:1px solid var(--border);border-radius:8px;overflow:hidden}.input-money span{padding-left:12px;color:var(--muted);font-weight:bold}
+.input-money input{height:42px;border:0;box-shadow:none}.primary-button,.pay-button{width:100%;height:45px;border:0;border-radius:8px;font-weight:bold;font-size:15px;cursor:pointer}
+.primary-button{background:#e7f0ed;color:var(--dark);margin-bottom:22px}.pay-button{margin-top:22px;background:var(--primary);color:#fff}
+.payment-section{border:1px solid var(--border);border-radius:12px;padding:20px;background:#fbfcfc}.payment-section h2{font-size:18px;margin-bottom:5px}.section-description{font-size:13px;margin-bottom:18px}
+.summary,.installment-info{display:flex;justify-content:space-between;gap:15px;border-top:1px solid var(--border);padding-top:15px;margin-top:6px}.summary span,.installment-info span{color:var(--muted);font-size:13px}.summary strong,.installment-info strong{color:var(--dark)}
+.card-number-wrapper{position:relative}.card-number-wrapper input{padding-right:52px}.brand-icon{position:absolute;width:38px;height:26px;object-fit:contain;right:9px;top:9px}
+.grid-two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.error-message{display:block;min-height:16px;color:var(--error);font-size:12px;margin-top:5px}
+.message{display:none;margin-top:16px;padding:12px;border-radius:8px;font-size:14px;text-align:center}.message.success{display:block;background:#e9f7ef;color:#18794e}.message.error{display:block;background:#fef0ef;color:var(--error)}
+.hidden{display:none!important}
+@media(max-width:480px){.payment-card{padding:22px}.grid-two{grid-template-columns:1fr;gap:0}}

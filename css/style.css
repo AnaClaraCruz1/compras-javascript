@@ -1,3 +1,8 @@
+/*
+  Exercício 3 — Página de Pagamento
+  Autora: Ana Clara Cruz
+  Curso: Técnico em Desenvolvimento de Sistemas — SENAC
+*/
 *{box-sizing:border-box;margin:0;padding:0}
 :root{--primary:#176b5b;--dark:#0e5144;--bg:#f4f7f6;--text:#24332f;--muted:#6b7773;--border:#d9e1de;--error:#b42318}
 body{min-height:100vh;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);padding:32px 16px}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagamento | Loja</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="container">
+  <section class="payment-card">
+    <header class="header">
+      <span class="tag">CHECKOUT</span>
+      <h1>Pagamento</h1>
+      <p>Escolha a forma de pagamento para finalizar sua compra.</p>
+    </header>
+
+    <form id="paymentForm" novalidate>
+      <div class="value-group">
+        <label for="valor">Valor da compra</label>
+        <div class="input-money"><span>R$</span><input id="valor" type="text" inputmode="decimal" placeholder="0,00" autocomplete="off"></div>
+        <small id="valorErro" class="error-message"></small>
+      </div>
+
+      <fieldset class="payment-method">
+        <legend>Forma de pagamento</legend>
+        <label class="method-option"><input type="radio" name="metodo" value="pix" id="pix" checked> PIX</label>
+        <label class="method-option"><input type="radio" name="metodo" value="cartao" id="cartao"> Cartão de Crédito</label>
+      </fieldset>
+
+      <button type="button" id="btnInformar" class="primary-button">Informar dados</button>
+
+      <section id="pixSection" class="payment-section">
+        <h2>Pagamento via PIX</h2>
+        <p class="section-description">Informe seu CPF para continuar.</p>
+        <div class="field">
+          <label for="cpf">CPF</label>
+          <input id="cpf" type="text" maxlength="14" inputmode="numeric" placeholder="000.000.000-00">
+          <small id="cpfErro" class="error-message"></small>
+        </div>
+        <div class="summary"><span>Total com desconto</span><strong id="totalPix">R$ 0,00</strong></div>
+      </section>
+
+      <section id="cartaoSection" class="payment-section hidden">
+        <h2>Cartão de Crédito</h2>
+        <p class="section-description">Preencha os dados do cartão.</p>
+
+        <div class="field">
+          <label for="numeroCartao">Número do cartão</label>
+          <div class="card-number-wrapper">
+            <input id="numeroCartao" type="text" maxlength="19" inputmode="numeric" placeholder="0000 0000 0000 0000">
+            <img id="bandeiraCartao" class="brand-icon hidden" alt="">
+          </div>
+          <small id="cartaoErro" class="error-message"></small>
+        </div>
+
+        <div class="field">
+          <label for="titular">Titular</label>
+          <input id="titular" type="text" placeholder="Nome impresso no cartão">
+          <small id="titularErro" class="error-message"></small>
+        </div>
+
+        <div class="grid-two">
+          <div class="field">
+            <label for="seguranca">Cód. Segurança</label>
+            <input id="seguranca" type="text" maxlength="4" inputmode="numeric" placeholder="000">
+            <small id="segurancaErro" class="error-message"></small>
+          </div>
+          <div class="field">
+            <label for="vencimento">Vencimento</label>
+            <input id="vencimento" type="text" maxlength="5" inputmode="numeric" placeholder="MM/AA">
+            <small id="vencimentoErro" class="error-message"></small>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="parcelas">Parcelas</label>
+          <select id="parcelas">
+            <option value="1">1x</option><option value="2">2x</option><option value="3">3x</option>
+            <option value="4">4x</option><option value="5">5x</option>
+          </select>
+        </div>
+
+        <div class="installment-info">
+          <div><span>Total</span><strong id="totalCartao">R$ 0,00</strong></div>
+          <div><span>Valor da parcela</span><strong id="valorParcela">R$ 0,00</strong></div>
+        </div>
+      </section>
+
+      <button type="submit" class="pay-button">Pagar</button>
+      <div id="mensagem" class="message" role="status" aria-live="polite"></div>
+    </form>
+  </section>
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>

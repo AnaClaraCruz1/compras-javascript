@@ -1,3 +1,8 @@
+/*
+  Exercício 3 — Página de Pagamento
+  Autora: Ana Clara Cruz
+  Curso: Técnico em Desenvolvimento de Sistemas — SENAC
+*/
 const $=id=>document.getElementById(id);
 const valor=$("valor"),valorErro=$("valorErro"),pix=$("pix"),cartao=$("cartao"),pixSection=$("pixSection"),cartaoSection=$("cartaoSection");
 const cpf=$("cpf"),cpfErro=$("cpfErro"),totalPix=$("totalPix"),numero=$("numeroCartao"),bandeira=$("bandeiraCartao"),cartaoErro=$("cartaoErro");
